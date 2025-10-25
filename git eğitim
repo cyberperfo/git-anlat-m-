@@ -1,0 +1,25 @@
+Harika bir soru. Bu iki kavram, Git'in temel taşlarıdır.
+
+### Commit (Değişiklik Paketi)
+
+**Commit**, projenizin o anki bir "anlık fotoğrafını" (snapshot) kaydetme işlemidir.
+
+* **Ne İşe Yarar:** Kodunuzda anlamlı bir değişiklik yaptığınızda (örneğin, bir hatayı düzelttiğinizde veya yeni bir özellik eklediğinizde), bu değişikliği `commit` edersiniz.
+* **İçeriği Nedir:** Her commit bir "commit mesajı" içerir. Bu mesajda, *ne* yaptığınızı ve *neden* yaptığınızı açıklarsınız (Örn: "Kullanıcı girişindeki şifre hatası düzeltildi").
+* **Benzetme:** Bir video oyunundaki "kayıt noktası" (save point) gibidir. Projenizin geçmişindeki belirli bir noktaya geri dönmenizi sağlar.
+
+**Kısacası:** `commit`, projenizin geçmişini oluşturan kayıtlı değişiklik paketidir.
+
+---
+
+### Branch (Dal)
+
+**Branch** (dal), projenizin ana sürümünü etkilemeden yeni özellikler denemek veya hataları düzeltmek için açtığınız **bağımsız bir geliştirme çizgisidir.**
+
+* **Ana Dal (Main Branch):** Genellikle `main` (veya `master`) adı verilen ana bir dalınız vardır. Bu dal, projenizin çalışan, stabil ve "temiz" sürümünü temsil eder.
+* **Ne İşe Yarar:** Diyelim ki projenize "karanlık mod" özelliği eklemek istiyorsunuz. Bu özelliği doğrudan `main` dalında yapmak risklidir, çünkü çalışmayan bir kodu ana projeye karıştırabilirsiniz.
+* **Çözüm:** `karanlik-mod` adında yeni bir *branch* açarsınız. Tüm denemelerinizi, kodlamanızı bu dal üzerinde yaparsınız.
+    * **İşiniz Biterse:** Karanlık mod özelliği hatasız çalıştığında, bu dalı ana `main` dalı ile birleştirirsiniz (merge).
+    * **Vazgeçerseniz:** Eğer özellik kötü olduysa veya vazgeçtiyseniz, `karanlik-mod` dalını kimseye zarar vermeden silebilirsiniz.
+
+**Kısacası:** `branch`, projenizin ana kopyasını bozmadan, güvenli bir şekilde denemeler yapmanızı sağlayan paralel bir çalışma alanıdır.
